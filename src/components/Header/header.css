@@ -1,23 +1,26 @@
-header {
+
+header{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: black;
   width: 100%;
   height: 60px;
+  background-color: #000000;
 }
-.logo {
+
+.logo{
   text-decoration: none;
   font-size: 30px;
   cursor: pointer;
-  color: #fff;
+  color: #FFF;
   font-weight: bold;
 }
-.favoritos {
+
+.favoritos{
   text-decoration: none;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #FFF;
   padding: 5px 14px;
-  color: black;
+  color: #000000;
   border-radius: 4px;
 }

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "//Deividmattos.github.io/MovieFlix%7D.github.io/MovieFlix/static/css/main.0aa04424.css",
+    "main.js": "//Deividmattos.github.io/MovieFlix%7D.github.io/MovieFlix/static/js/main.69626182.js",
+    "index.html": "//Deividmattos.github.io/MovieFlix%7D.github.io/MovieFlix/index.html",
+    "main.0aa04424.css.map": "//Deividmattos.github.io/MovieFlix%7D.github.io/MovieFlix/static/css/main.0aa04424.css.map",
+    "main.69626182.js.map": "//Deividmattos.github.io/MovieFlix%7D.github.io/MovieFlix/static/js/main.69626182.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0aa04424.css",
+    "static/js/main.69626182.js"
+  ]
+}

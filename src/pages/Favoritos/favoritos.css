@@ -36,3 +36,12 @@
   color: #116feb;
   margin-right: 14px;
 }
+.bnt_excluir {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  width: 50%;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid red;
+}

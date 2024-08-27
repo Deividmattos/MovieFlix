@@ -7,7 +7,7 @@ function Favoritos() {
   const [filmes, setFilmes] = useState([]);
 
   useEffect(() => {
-    const minhaLista = localStorage.getItem("@primeflix");
+    const minhaLista = localStorage.getItem("@movieflix");
     setFilmes(JSON.parse(minhaLista) || []);
   }, []);
 
@@ -17,7 +17,7 @@ function Favoritos() {
     });
 
     setFilmes(filtroFilmes);
-    localStorage.setItem("@primeflix", JSON.stringify(filtroFilmes));
+    localStorage.setItem("@movieflix", JSON.stringify(filtroFilmes));
     toast.success("Filme removido com sucesso");
   }
 
@@ -37,7 +37,12 @@ function Favoritos() {
 
               <div>
                 <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
-                <button onClick={() => excluirFilme(item.id)}>Excluir</button>
+                <button
+                  className="bnt_excluir"
+                  onClick={() => excluirFilme(item.id)}
+                >
+                  Excluir
+                </button>
               </div>
             </li>
           );

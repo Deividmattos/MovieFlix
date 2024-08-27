@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./filme-info.css";
 import api from "../../services/api";
+import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
 function Filme() {
@@ -39,7 +40,7 @@ function Filme() {
   }, [navigate, id]);
 
   function salvarFilme() {
-    const minhaLista = localStorage.getItem("@movieFlix");
+    const minhaLista = localStorage.getItem("@movieflix");
 
     let filmesSalvos = JSON.parse(minhaLista) || [];
 
@@ -48,12 +49,13 @@ function Filme() {
     );
 
     if (hasFilme) {
-      alert("Esse Filme ja esta na lista");
+      toast.warn("Esse filme já está na sua lista!");
       return;
     }
+
     filmesSalvos.push(filme);
-    localStorage.setItem("@movieFlix", JSON.stringify(filmesSalvos));
-    alert("Filme Salvo com sucesso");
+    localStorage.setItem("@movieflix", JSON.stringify(filmesSalvos));
+    toast.success("Filme salvo com sucesso!");
   }
 
   if (loading) {
@@ -80,9 +82,9 @@ function Filme() {
         <button onClick={salvarFilme}>Salvar</button>
         <button>
           <a
-            rel="external"
-            href={`https://youtube.com/results?search_query=${filme.title}Trailer`}
             target="blank"
+            rel="external"
+            href={`https://youtube.com/results?search_query=${filme.title} Trailer`}
           >
             Trailer
           </a>

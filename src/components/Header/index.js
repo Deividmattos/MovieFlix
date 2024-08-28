@@ -5,10 +5,10 @@ function Header() {
   return (
     <header>
       <Link className="logo" to="/">
-        Stella Movie Flix
+        Stella Flix
       </Link>
       <Link className="favoritos" to="/favoritos">
-        Meus filmes
+        My movies
       </Link>
     </header>
   );

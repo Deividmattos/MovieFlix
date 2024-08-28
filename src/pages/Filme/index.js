@@ -18,7 +18,7 @@ function Filme() {
         .get(`/movie/${id}`, {
           params: {
             api_key: "28fc232cc001c31e8a031f419d0a14ca",
-            language: "pt-BR",
+            language: "en",
           },
         })
         .then((response) => {
@@ -35,7 +35,7 @@ function Filme() {
     loadFilme();
 
     return () => {
-      console.log("COMPONENTE FOI DESMONTADO");
+      console.log("COMPONENT HAS BEEN DISASSEMBLED");
     };
   }, [navigate, id]);
 
@@ -49,13 +49,13 @@ function Filme() {
     );
 
     if (hasFilme) {
-      toast.warn("Esse filme já está na sua lista!");
+      toast.warn("This movie is already on your list!");
       return;
     }
 
     filmesSalvos.push(filme);
     localStorage.setItem("@movieflix", JSON.stringify(filmesSalvos));
-    toast.success("Filme salvo com sucesso!");
+    toast.success("Movie saved successfully!");
   }
 
   if (loading) {
@@ -79,7 +79,7 @@ function Filme() {
       <strong>Avalição: {filme.vote_average} / 10</strong>
 
       <div className="area-buttons">
-        <button onClick={salvarFilme}>Salvar</button>
+        <button onClick={salvarFilme}>Save</button>
         <button>
           <a
             target="blank"
@@ -90,7 +90,7 @@ function Filme() {
           </a>
         </button>
         <button>
-          <Link to="/">Voltar</Link>
+          <Link to="/">Return</Link>
         </button>
       </div>
     </div>

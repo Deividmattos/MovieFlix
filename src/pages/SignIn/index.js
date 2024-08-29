@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./signin.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/film-projector_200px.png";
 import { Link } from "react-router-dom";
 
 export default function Singnin() {

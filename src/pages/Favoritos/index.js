@@ -18,16 +18,14 @@ function Favoritos() {
 
     setFilmes(filtroFilmes);
     localStorage.setItem("@movieflix", JSON.stringify(filtroFilmes));
-    toast.success("Filme removido com sucesso");
+    toast.success("Movie removed successfully");
   }
 
   return (
     <div className="meus-filmes">
-      <h1>Meus filmes</h1>
+      <h1>My movies</h1>
 
-      {filmes.length === 0 && (
-        <span>Você não possui nenhum filme salvo :( </span>
-      )}
+      {filmes.length === 0 && <span>You don't have any saved movies :( </span>}
 
       <ul>
         {filmes.map((item) => {
@@ -41,7 +39,7 @@ function Favoritos() {
                   className="bnt_excluir"
                   onClick={() => excluirFilme(item.id)}
                 >
-                  Excluir
+                  Delete
                 </button>
               </div>
             </li>

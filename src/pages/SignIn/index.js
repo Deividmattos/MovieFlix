@@ -11,7 +11,7 @@ export default function Singnin() {
     <div className="container">
       <div className="login">
         <div className="login-area">
-          <img src="{logo}" alt="Logo do Site de filmes" />
+          <img src={logo} alt="Logo do Site de filmes" />
         </div>
 
         <form action="">

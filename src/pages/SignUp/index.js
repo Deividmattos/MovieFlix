@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/film-projector_200px.png";
 import { Link } from "react-router-dom";
 
 export default function SingUp() {
@@ -11,7 +11,7 @@ export default function SingUp() {
     <div className="container">
       <div className="login">
         <div className="login-area">
-          <img src="{logo}" alt="Logo do Site de filmes" />
+          <img src={logo} alt="Logo do Site de filmes" />
         </div>
 
         <form action="">

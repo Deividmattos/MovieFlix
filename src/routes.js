@@ -5,6 +5,7 @@ import Filme from "./pages/Filme";
 import Favoritos from "./pages/Favoritos";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import Dashboard from "./pages/Dashboard";
 
 import Erro from "./pages/Erro";
 
@@ -19,6 +20,7 @@ function RoutesApp() {
         <Route path="/filme/:id" element={<Filme />} />
         <Route path="/favoritos" element={<Favoritos />} />
         <Route path="/register" element={<SignUp />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
         <Route path="*" element={<Erro />} />
       </Routes>

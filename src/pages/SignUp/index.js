@@ -7,6 +7,14 @@ export default function SingUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (name !== "" && email !== "" && password !== "") {
+      console.log("Fazendo Cadastro");
+    }
+  }
+
   return (
     <div className="container">
       <div className="login">
@@ -14,25 +22,25 @@ export default function SingUp() {
           <img src={logo} alt="Logo do Site de filmes" />
         </div>
 
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <h1>New account</h1>
           <input
             type="text"
             placeholder="Your Name"
             value={name}
-            onchange={(e) => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
           />
           <input
             type="text"
             placeholder="email@email.com"
             value={email}
-            onchange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
             placeholder="***********"
             value={password}
-            onchange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <button type="submit" value="Access">
             Register

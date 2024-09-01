@@ -14,20 +14,22 @@ export default function Singnin() {
           <img src={logo} alt="Logo do Site de filmes" />
         </div>
 
-        <form action="">
-          <h1>Login</h1>
+        <form>
+          <h1>Entrar</h1>
           <input
             type="text"
             placeholder="email@email.com"
             value={email}
-            onchange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
+
           <input
             type="password"
-            placeholder="***********"
+            placeholder="********"
             value={password}
-            onchange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
+
           <button type="submit" value="Access">
             Access
           </button>
